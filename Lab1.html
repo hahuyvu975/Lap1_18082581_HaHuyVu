@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+    <div id="root"></div>
+    <script>
+        var inputa = document.createElement('input');
+        inputa.setAttribute('id', 'numa');
+        inputa.setAttribute('placeholder', 'a input');
+        document.body.appendChild(inputa);
+
+        var inputb = document.createElement('input');
+        inputb.setAttribute('id', 'numb');
+        inputb.setAttribute('placeholder', 'b input');
+        document.body.appendChild(inputb);
+
+        var button = document.createElement('button');
+        document.body.appendChild(button);
+        button.textContent = 'sum';
+
+        button.onclick = function() {
+            var a = parseInt(inputa.value)
+            var b = parseInt(inputb.value)
+
+            console.log(a);
+            console.log(b);
+            document.body.appendChild(
+                document.createElement(
+                    'span'
+                )
+            ).innerHTML = a + b;
+
+        }
+        console.log(button);
+    </script>
+
+</body>
+
+</html>
